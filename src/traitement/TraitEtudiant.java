@@ -95,5 +95,6 @@ public class TraitEtudiant {
 
         }
         
+        System.out.println("\t Bye bye à la prochaine fois :)");
 	}
 }
