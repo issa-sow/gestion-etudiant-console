@@ -8,8 +8,16 @@ public class Personne {
 	protected String adresse;
 	protected String email;
 	
+	public Personne() {
+		this.nom = null;
+		this.prenom = null;
+		this.tel = null;
+		this.adresse = null;
+		this.email = null;
+	}
+	
 	public Personne(String nom, String prenom, String tel, String adresse, String email) {
-		this.nom =nom;
+		this.nom = nom;
 		this.prenom = prenom;
 		this.tel = tel;
 		this.adresse = adresse;
@@ -65,7 +73,7 @@ public class Personne {
 	}
 	
 	public String toString() {
-		return  "\t Nom : " + this.id + "\n" + 
+		return  "\t idEtudiant : " + this.id + "\n" + 
 				"\t Nom : " + this.nom + "\n" + 
 				"\t Prenom : " + this.prenom + "\n" +
 				"\t Téléphone : " + this.tel + "\n" +

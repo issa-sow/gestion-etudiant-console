@@ -2,12 +2,18 @@ package modele;
 
 public class Etudiant extends Personne {
 	private String salle;
-	private Departement dep;
+	private String niveau;
 	
-	public Etudiant(String nom, String prenom, String tel, String adresse, String email, String salle, Departement dep) {
+	public Etudiant() {
+		super();
+		this.salle = null;
+	}
+	
+	public Etudiant(String nom, String prenom, String tel, String adresse, String email, String salle, String niveau) {
 		super(nom, prenom, tel, adresse, email);
 		this.salle = salle;
-		this.dep = dep;
+		//this.idDep = idDep;
+		this.niveau = niveau;
 	}
 
 	public String getSalle() {
@@ -18,12 +24,12 @@ public class Etudiant extends Personne {
 		this.salle = salle;
 	}
 
-	public Departement getDep() {
-		return dep;
+	public String getNiveau() {
+		return niveau;
 	}
-
-	public void setDep(Departement dep) {
-		this.dep = dep;
+	
+	public void setNiveau(String niveau) {
+		this.niveau = niveau;
 	}
 	
 	public String toString() {
@@ -31,7 +37,7 @@ public class Etudiant extends Personne {
 				"\t Information sur l'étudiant \n\n" + 
 				super.toString() + 
 				"\t Salle : " + this.salle +  "\n" +
-				dep.toString() + "\n" +
+				"\t Niveau : " + this.niveau +  "\n" +
 				"] \n";
 	}
 }
